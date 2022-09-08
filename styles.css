@@ -1,0 +1,61 @@
+/*========================= GOOGLE FONTS =========================*/
+@import url("https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@300;400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap');
+/*========================= VARIABLES CSS =========================*/
+:root {
+  /*____________________ Colors ____________________*/
+  --clr-dark: #101415;
+  --clr-light: #F7F5F2;
+  --clr-theme: #001AFF;
+  --clr-hover: orangered;
+
+  /*____________________ Font and typography ____________________*/
+  --font-family-main: 'Lexend', sans-serif;
+  --font-family-sub: "Poppins", sans-serif;
+  --font-family-barcode: 'Libre Barcode 128 Text', cursive;
+
+  /*____________________ Font Size ____________________*/
+  /* Desktop Font size */
+  --fs-subtext: 1rem;
+  --fs-text: 1.25rem;
+
+  --fs-subtitle: 1.75rem;
+  --fs-title: 2rem;
+
+  --fs-small: 0.75rem;
+  --fs-huge: 4rem;
+  /*____________________ z index ____________________*/
+  --z-lowest: -10;
+  --z-low: -5;
+  --z-high: 5;
+  --z-highest: 10;
+}
+
+/*========================= BASE =========================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-size: var(--fs-text);
+  font-weight: 300;
+  font-family: var(--font-family-main);
+  color: var(--clr-dark);
+  background-color: var(--clr-light);
+  letter-spacing: 2px;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
