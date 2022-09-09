@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@300;400;500&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap');
+
 /*========================= VARIABLES CSS =========================*/
 :root {
   /*____________________ Colors ____________________*/
@@ -10,15 +11,17 @@
   --clr-theme: #001AFF;
   --clr-hover: orangered;
 
-  /*____________________ Font and typography ____________________*/
-  --font-family-main: 'Lexend', sans-serif;
-  --font-family-sub: "Poppins", sans-serif;
-  --font-family-barcode: 'Libre Barcode 128 Text', cursive;
+  /*____________________ Font Family ____________________*/
+  --font-main: 'Lexend', sans-serif;
+  --fon-sub: "Poppins", sans-serif;
+  --font-barcode: 'Libre Barcode 128 Text', cursive;
 
   /*____________________ Font Size ____________________*/
   /* Desktop Font size */
   --fs-subtext: 1rem;
   --fs-text: 1.25rem;
+
+  --fs-icon: 1.5rem;
 
   --fs-subtitle: 1.75rem;
   --fs-title: 2rem;
@@ -32,7 +35,7 @@
   --z-highest: 10;
 }
 
-/*========================= BASE =========================*/
+/*____________________ Base ____________________*/
 * {
   margin: 0;
   padding: 0;
@@ -43,8 +46,7 @@ html {
 }
 body {
   font-size: var(--fs-text);
-  font-weight: 300;
-  font-family: var(--font-family-main);
+  font-family: var(--font-main);
   color: var(--clr-dark);
   background-color: var(--clr-light);
   letter-spacing: 2px;
@@ -58,4 +60,83 @@ a {
 img {
     max-width: 100%;
     height: auto;
+}
+main {
+    max-width: 968px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+/*Remove the property of 100vh, when inserting its content*/
+main section {
+    height: 100vh;
+    padding: 2rem 0;
+}
+/*========================= NAVIGATION BAR =========================*/
+nav {
+    position: fixed;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+
+    width: 20rem;
+    height: 4.5rem;
+    margin: 0 auto;
+    padding: 1rem 0.5rem;
+    overflow: hidden;
+
+    background-color: var(--clr-light);
+    box-shadow: 0 8px 32px hsla(231, 44%, 45%, .2);
+    border-radius: 5px;
+}
+.nav__list {
+    display: flex;
+    justify-content: space-around;
+}
+  
+.nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav__link i {
+    font-size: var(--fs-icon);
+    color: var(--clr-dark);
+    transition: .3s;
+}
+.nav__name {
+    position: absolute;
+    font-size: var(--fs-small);
+    color: var(--clr-theme);
+    
+    transition: .4s;
+    transform: translateY(50px);
+    opacity: 0;
+}
+/* Active link in Nav bar*/
+.active-link i {
+    color: var(--clr-theme);
+}
+  
+.active-link .nav__name {
+    opacity: 1;
+    transform: translateY(30px);
+}
+  
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+    nav {
+      zoom: .8;
+    }
+}
+  
+/* For large devices */
+@media screen and (min-width: 968px) {
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    nav {
+      zoom: 1.1;
+    }
 }
