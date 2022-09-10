@@ -21,7 +21,7 @@
 <body>
      <!--____________________ NAVIGATION BAR ____________________-->
      <nav>
-        <div class="nav__list">
+        <ul class="nav__list">
             <a href="#home" class="nav__link active-link">
                 <i class="uil uil-university"></i>
                 <span class="nav__name">
@@ -50,23 +50,75 @@
                     Contact
                 </span>
             </a>
-        </div>
+        </ul>
     </nav>
 
-    <!--____________________ MAIN SECTION ____________________-->
+    <!--____________________ MAIN ____________________-->
     <main>
-        <section id="home">
-            <h2>Home</h2>
+        <!--____________________ Home Section ____________________-->
+        <section id="home" class="home__section">
+
+            <!-- Card Section -->
+            <div class="card__profile">
+                <div class="card__top-bar"></div>
+                
+                <div class="card__info">
+                    <div class="card__img-cotainer">
+                        <div class="card__img gooey">
+                            <img 
+                                src="img/profile.png"
+                                alt="profile image"
+                                class="profile__img"
+                            />
+                        </div>
+                    </div>
+                    <div class="card__socialmedia">
+                        <ul class="card__links-container">
+                            <a href="">
+                                <i class="uil uil-linkedin-alt card__icon"></i>
+                                <span class="card__icon-text">
+                                    Linkedin
+                                </span>
+                            </a>
+                        
+                            <a href="">
+                                <i class="uil uil-envelope card__icon"></i>
+                                <span class="card__icon-text">
+                                    Resume
+                                </span>
+                            </a>
+                        
+                            <a href="">
+                                <i class="uil uil-instagram card__icon"></i>
+                                <span class="card__icon-text">
+                                    Instagram
+                                </span>
+                            </a>
+                        
+                            <a href="">
+                                <i class="uil uil-behance-alt card__icon"></i>
+                                <span class="card__icon-text">
+                                    Behance
+                                </span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
         </section>
 
+        <!--____________________ About Section ____________________-->
         <section id="about">
             <h2>About</h2>
         </section>
 
+        <!--____________________ Studio Section ____________________-->
         <section id="studio">
             <h2>Studio</h2>
         </section>
         
+        <!--____________________ Contact Section ____________________-->
         <section id="contact">
             <h2>Contact</h2>
         </section>

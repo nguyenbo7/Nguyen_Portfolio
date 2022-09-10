@@ -62,16 +62,15 @@ img {
     height: auto;
 }
 main {
-    max-width: 968px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    max-width: 90%;
+    margin: 0 auto;
 }
 /*Remove the property of 100vh, when inserting its content*/
 main section {
     height: 100vh;
     padding: 2rem 0;
 }
-/*========================= NAVIGATION BAR =========================*/
+/*____________________ Navigatin Bar ____________________*/
 nav {
     position: fixed;
     bottom: 2rem;
@@ -121,8 +120,128 @@ nav {
     opacity: 1;
     transform: translateY(30px);
 }
+
+/*____________________ Home Section ____________________*/
+.card__profile {
+    width: 100%;
+    height: 420px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.card__top-bar {
+    width: 320px;
+    height: 20px;
+    background-color: var(--clr-dark);
+}
+.card__info {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card__img-cotainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 320px;
+    height: 240px;
+    box-shadow: rgba(139, 134, 134, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.8) 0px 18px 36px -18px inset;
+}
+.card__img {
+    width: 70%;
+    overflow: hidden;
+}
+.gooey {
+    background-image: linear-gradient(120deg, #daa520 0%, #ff6600 100%);
+    border-radius: 74% 26% 69% 32% / 47% 73% 27% 53%;
+    animation: morph 3s linear infinite;
+}
   
-/*=============== BREAKPOINTS ===============*/
+@keyframes morph {
+    0%,
+    100% {
+      border-radius: 25% 75% 64% 36% / 55% 64% 36% 45%;
+      transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+    }
+    75% {
+      border-radius: 45% 55% 61% 39% / 73% 70% 30% 27%;
+      transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+    }
+    50% {
+      opacity: 0.8;
+      border-radius: 32% 68% 72% 28% / 24% 47% 53% 76%;
+      transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+    }
+    25% {
+      border-radius: 38% 62% 32% 68% / 63% 27% 73% 37%;
+      transform: translate3d(0, -5px, 0) rotateZ(0.01deg);
+    }
+}
+.card__socialmedia {
+    width: 320px;
+    display: flex;
+    justify-content: space-around;
+}
+.card__links-container {
+    margin-top: 2rem;
+    transition: 0.5s;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+}
+.card__links-container a {
+    display: flex;
+    width: 150px;
+    margin-top: 10px;
+    color: var(--clr-dark);
+    border: 1px solid var(--clr-dark);
+    transition: 0.2s ease-in-out;
+}
+.card__links-container a:hover {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+}
+.card__icon {
+    width: 60px;
+    height: 50px;
+    font-size: 1.125rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card__icon-text {
+    width: 100px;
+    font-size: 0.75rem;
+    padding-left: 0.25rem;
+    /* background-color: #ff6600; */
+
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+/*=============== Responsive Devices ===============*/
 /* For small devices */
 @media screen and (max-width: 320px) {
     nav {
@@ -139,4 +258,33 @@ nav {
     nav {
       zoom: 1.1;
     }
+    .card__profile {
+        width: 550px;
+        height: 300px;
+        border: 1px solid var(--clr-dark);
+    }
+    .card__top-bar {
+        width: 100%;
+        height: 50px;
+    }
+    .card__info {
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+    }
+    .card__img-cotainer {
+        height: 200px;
+        margin-left: 30px;
+    }
+    .card__links-container {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .card__links-container a {
+        border: none;
+        margin-top: 3px;
+        width: 180px;
+    }
+    
 }
