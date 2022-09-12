@@ -20,122 +20,181 @@
 
 <body>
      <!--____________________ NAVIGATION BAR ____________________-->
-     <nav>
-        <ul class="nav__list">
-            <a href="#home" class="nav__link active-link">
-                <i class="uil uil-university"></i>
-                <span class="nav__name">
-                    Home
-                </span>
-            </a>
-
-            <a href="#about" class="nav__link">
-                <i class="uil uil-user"></i>
-                <span class="nav__name">
-                    About
-                </span>
-            </a>
-
-            <a href="#studio" class="nav__link">
-                <i class="uil uil-brackets-curly"></i>
-                <!-- <i class="uil uil-book-open"></i> -->
-                <span class="nav__name">
-                    Studio
-                </span>
-            </a>
-
-            <a href="#contact" class="nav__link">
-                <i class="uil uil-telegram-alt"></i>
-                <span class="nav__name">
-                    Contact
-                </span>
-            </a>
-        </ul>
-    </nav>
-
+     
     <!--____________________ MAIN ____________________-->
     <main>
         <!--____________________ Home Section ____________________-->
-        <section id="home" class="home__section">
+        <section id="home" class="home__section container__section">
 
-            <!-- Card Container -->
-            <div class="card__profile">
-                <div class="card__top-bar"></div>
-                
-                <div class="card__info">
-                    <div class="card__img-cotainer">
-                        <div class="card__img gooey">
+            <div class="profile__container">
+                <!-- Card Container -->
+                <div class="card__container">
+                    <div class="card__top-bar"></div>
+                    
+                    <div class="card__info">
+                        <div class="card__img-cotainer">
+                            <div class="card__img gooey">
+                                <img 
+                                    src="img/profile.png"
+                                    alt="profile image"
+                                    class="profile__img"
+                                />
+                            </div>
+                        </div>
+                        <div class="card__socialmedia">
+                            <ul class="card__links-container">
+                                <a href="">
+                                    <i class="uil uil-linkedin-alt card__icon"></i>
+                                    <span class="card__icon-text">
+                                        Linkedin
+                                    </span>
+                                </a>
+                            
+                                <a href="">
+                                    <i class="uil uil-envelope card__icon"></i>
+                                    <span class="card__icon-text">
+                                        Resume
+                                    </span>
+                                </a>
+                            
+                                <a href="">
+                                    <i class="uil uil-instagram card__icon"></i>
+                                    <span class="card__icon-text">
+                                        Instagram
+                                    </span>
+                                </a>
+                            
+                                <a href="">
+                                    <i class="uil uil-behance-alt card__icon"></i>
+                                    <span class="card__icon-text">
+                                        Behance
+                                    </span>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Introduction Container -->
+                <div class="intro__container">
+                    <div class="intro__info">
+
+                        <div class="horizontal__line"></div>
+                        <div class="intro__title">NGUYEN CHAU</div>
+                        <div class="intro__subtitle">:/ Full-Stack Developer /</div>
+                        
+                        <div class="intro__text">
+                            Passionate about Engineering and art, 
+                            seeking inspirations from everyday life.
+                        </div>
+
+                        <!--Only Display on SMALL Device-->
+                        <div class="intro__exp">
+                            <div class="exp__list">
+                                <span class="title__bold">05+</span>
+                                <br />Years
+                            </div>
+                            <div class="exp__list">
+                                <span class="title__bold">20+</span>
+                                <br />Projects
+                            </div>
+                            <div class="exp__list">
+                                <span class="title__bold">05+</span>
+                                <br />Positions
+                            </div>
+                        </div>
+
+                        <!--Only Display on lARGE Device-->
+                        <div class="intro__img-container">
                             <img 
-                                src="img/profile.png"
-                                alt="profile image"
-                                class="profile__img"
+                                class="intro__img" 
+                                src="https://images.pexels.com/photos/1624630/pexels-photo-1624630.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" 
+                                alt="white flower" 
                             />
                         </div>
                     </div>
-                    <div class="card__socialmedia">
-                        <ul class="card__links-container">
-                            <a href="">
-                                <i class="uil uil-linkedin-alt card__icon"></i>
-                                <span class="card__icon-text">
-                                    Linkedin
-                                </span>
-                            </a>
+                </div>
+            </div>
+
+            <!-- Experience Container (LARGE Device Only)-->
+            <div class="exp__container">
+                <div class="exp__item">
+                    <div class="exp__item-top">
+                        <div class="horizontal__line"></div>
+                        <div class="exp__title">
+                            <span class="exp__title-bold"> 05+</span>
+                            Years Experience
+                        </div>
+                        <div class="exp__text">
+                            Having an interest in technology, 
+                            as well as a passion for art since a very young age, 
+                            Nguyen has been learning to code since he was in middle school. 
+                            He is currently a software engineering student 
+                            at San Jose State University from 2020 -2024. 
+                            In addition to work on the Full-stack application, 
+                            Nguyen also develops his digital drawing skills in his free time. 
+                            He likes to work in a team.
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="exp__item">
+                    <div class="exp__item-top">
+                        <div class="horizontal__line"></div>
+                        <div class="exp__title">
+                            <span class="exp__title-bold"> 20+</span>
+                            Projects
+                        </div>
+                        <div class="exp__text">
+                            Nguyen's first project was to build a portfolio website 
+                            for class assignment. He barely developed his website 
+                            through the first few lines of code. 
+                            While working, he was fascinated by the color palette 
+                            and the transitions between the elements. 
+                            He began to spend more time on web design and 
+                            seek inspiration from other artists around the world.
+                        </div>
+                    </div>
+    
+                    <div class="exp__item-bot">
+                        <div class="horizontal__line"></div>
+                        <div class="exp__title">
+                            <span class="exp__title-bold">04+</span>
+                            Positions
+                        </div>
                         
-                            <a href="">
-                                <i class="uil uil-envelope card__icon"></i>
-                                <span class="card__icon-text">
-                                    Resume
-                                </span>
-                            </a>
+                        <div class="skill__container">
+                            <div class="skill__item">
+                                <div class="skill__title">UX/UI Design</div>
+                                <div class="skill__list">
+                                    #Figma #Wireframing #Prototyping
+                                </div>
+                            </div>
+                            <div class="skill__item">
+                                <div class="skill__title">Front-end</div>
+                                <div class="skill__list">
+                                    #Html #Css #Boostrap #JavaScript
+                                </div>
+                            </div>
+                            <div class="skill__item">
+                                <div class="skill__title">Back-end</div>
+                                <div class="skill__list">
+                                    #MongoDB #Express #React #Node <br />
+                                    #Python #Django #SQL
+                                </div>
+                            </div>
+                            <div class="skill__item">
+                                <div class="skill__title">Graphic Design</div>
+                                <div class="skill__list">
+                                    #Illustrator #PhotoShop #Blender
+                                </div>
+                            </div>
+                        </div>
                         
-                            <a href="">
-                                <i class="uil uil-instagram card__icon"></i>
-                                <span class="card__icon-text">
-                                    Instagram
-                                </span>
-                            </a>
-                        
-                            <a href="">
-                                <i class="uil uil-behance-alt card__icon"></i>
-                                <span class="card__icon-text">
-                                    Behance
-                                </span>
-                            </a>
-                        </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Introduction Container -->
-            <div class="intro__container">
-                <div class="intro__info">
-
-                    <div class="horizontal__line"></div>
-                    <div class="intro__subtitle">{ Full-Stack Developer }</div>
-                    <div class="intro__title">Nguyen Chau</div>
-                    
-                    <div class="intro__text">
-                        Passionate about Engineering and art, 
-                        seeking inspirations from everyday life.
-                    </div>
-
-                    <div class="intro__exp">
-                        <div class="exp__list">
-                            <span class="title__bold">05+</span>
-                            <br />Years
-                        </div>
-                        <div class="exp__list">
-                            <span class="title__bold">20+</span>
-                            <br />Projects
-                        </div>
-                        <div class="exp__list">
-                            <span class="title__bold">05+</span>
-                            <br />Positions
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
         </section>
 
         <!--____________________ About Section ____________________-->

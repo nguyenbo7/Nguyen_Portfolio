@@ -60,13 +60,7 @@ img {
     height: auto;
 }
 main {
-    max-width: 90%;
-    margin: 0 auto;
-}
-/*Remove the property of 100vh, when inserting its content*/
-main section {
-    height: 100vh;
-    padding: 2rem 0;
+    max-width: 100%;
 }
 
 .horizontal__line {
@@ -76,58 +70,11 @@ main section {
     background-color: var(--clr-dark);
 }
 /*____________________ Navigatin Bar ____________________*/
-nav {
-    position: fixed;
-    bottom: 2rem;
-    left: 0;
-    right: 0;
 
-    width: 20rem;
-    height: 4.5rem;
-    margin: 0 auto;
-    padding: 1rem 0.5rem;
-    overflow: hidden;
-
-    background-color: var(--clr-light);
-    box-shadow: 0 8px 32px hsla(231, 44%, 45%, .2);
-    border-radius: 5px;
-}
-.nav__list {
-    display: flex;
-    justify-content: space-around;
-}
-  
-.nav__link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.nav__link i {
-    font-size: var(--fs-icon);
-    color: var(--clr-dark);
-    transition: .3s;
-}
-.nav__name {
-    position: absolute;
-    font-size: var(--fs-small);
-    color: var(--clr-theme);
-    
-    transition: .4s;
-    transform: translateY(50px);
-    opacity: 0;
-}
-/* Active link in Nav bar*/
-.active-link i {
-    color: var(--clr-theme);
-}
-  
-.active-link .nav__name {
-    opacity: 1;
-    transform: translateY(30px);
-}
 
 /*____________________ Home Section ____________________*/
 .home__section {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -138,23 +85,18 @@ nav {
     Card Section
     --------------------------
 */
-.card__profile {
+.card__container {
     width: 320px;
-    height: 420px;
+    height: 400px;
     margin-bottom: 2rem;
 
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.card__top-bar {
-    width: 100%;
-    height: 20px;
-    background-color: var(--clr-dark);
-}
 .card__info {
     width: 100%;
-
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -165,16 +107,17 @@ nav {
     align-items: center;
     justify-content: center;
 
+    width: 100%;
     height: 240px;
     box-shadow: rgba(139, 134, 134, 0.25) 0px 30px 60px -12px inset,
     rgba(0, 0, 0, 0.5) 0px 18px 36px -18px inset;
 }
 .card__img {
-    width: 70%;
+    width: 60%;
     overflow: hidden;
 }
 .gooey {
-    background-color: #daa520;
+    background-color: #b4a39c;
     border-radius: 74% 26% 69% 32% / 47% 73% 27% 53%;
     animation: morph 3s linear infinite;
 }
@@ -216,7 +159,6 @@ nav {
     width: 150px;
     margin-top: 10px;
     color: var(--clr-dark);
-    /* border: 1px solid var(--clr-dark); */
     transition: 0.2s ease-in-out;
 }
 .card__links-container a:hover {
@@ -260,13 +202,19 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    row-gap: 0.5rem;
 }
+.intro__info .horizontal__line {
+    margin: 0;
+}
+
 .intro__title {
-    font-size: 2rem;
-    color: #daa520;
-    font-weight: 800;
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    padding: 8px 16px;
+    margin-bottom: 1.25rem;
+}
+.intro__subtitle {
+    margin-bottom: 0.5rem;
 }
 .intro__text {
     text-align: center;
@@ -289,9 +237,16 @@ nav {
 .title__bold {
     font-size: 1.75rem;
 }
-.intro__exp-display {
-    border: 1px solid var(--clr-dark);
-    padding: 15px;
+.intro__img-container {
+    display: none;
+}
+
+
+
+
+
+.exp__container {
+    display: none;
 }
 
 
@@ -319,30 +274,43 @@ nav {
 }
   
 /* For large devices */
-@media screen and (min-width: 968px) {
-    .container {
-      margin-left: auto;
-      margin-right: auto;
-    }
+@media screen and (min-width: 1500px) {
     nav {
       zoom: 1.1;
     }
-    .card__profile {
+    .container__section {
+        padding: 4rem;
+        height: 100vh;
+    }
+    .home__section {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .profile__container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+    .card__container {
         width: 550px;
         height: 300px;
         border: 1px solid var(--clr-dark);
     }
     .card__top-bar {
-        height: 50px;
+        width: 100%;
+        height: 30px;
+        background-color: var(--clr-dark);
     }
     .card__info {
-        width: 100%;
-        height: 100%;
         flex-direction: row;
+        justify-content: space-around;
     }
     .card__img-cotainer {
+        width: 280px;
         height: 200px;
-        margin-left: 30px;
     }
     .card__links-container {
         margin: 0;
@@ -352,7 +320,79 @@ nav {
     .card__links-container a {
         border: none;
         margin-top: 3px;
-        width: 180px;
+    }
+
+
+    .intro__container {
+        width: 550px;
+    }
+    .intro__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .intro__text {
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+    .intro__exp {
+        display: none;
+    }
+
+    .intro__img-container {
+        width: 100%;
+        height: 300px;
+        border: 1px solid var(--clr-dark);
+        
+        display: flex;
+        justify-content: center;
+    }
+    .intro__img {
+        width: 484px;
+        margin: 2rem;
+        object-fit: cover;
+    }
+
+
+
+
+
+
+    .exp__container {
+        /* width: 1000px; */
+        display: flex;
+        column-gap: 6rem;
+        /* background-color: #daa520; */
+    }
+    .exp__item {
+        width: 350px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .exp__item-top{
+        height: 380px;
+    }
+    .exp__item-bot {
+        height: 500px;
+    }
+    .exp__title {
+        font-size: 1.125rem;
+    }
+    .exp__title-bold {
+        font-size: 4rem;
+    }
+    .exp__text {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+    .skill__container {
+        font-size: 14px;
+    }
+    .skill__list {
+        margin-bottom: 50px;
     }
     
 }
