@@ -203,7 +203,7 @@ main {
     flex-direction: column;
     align-items: center;
 }
-.intro__info .horizontal__line {
+.horizontal__line {
     margin: 0;
 }
 
@@ -212,6 +212,7 @@ main {
     background-color: var(--clr-dark);
     padding: 8px 16px;
     margin-bottom: 1.25rem;
+
 }
 .intro__subtitle {
     margin-bottom: 0.5rem;
@@ -288,7 +289,7 @@ main {
         justify-content: space-between;
     }
     .profile__container {
-        height: 100%;
+        height: 850px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -301,7 +302,7 @@ main {
     }
     .card__top-bar {
         width: 100%;
-        height: 30px;
+        height: 45px;
         background-color: var(--clr-dark);
     }
     .card__info {
@@ -325,6 +326,7 @@ main {
 
     .intro__container {
         width: 550px;
+        height: 450px;
     }
     .intro__info {
         display: flex;
@@ -342,7 +344,7 @@ main {
 
     .intro__img-container {
         width: 100%;
-        height: 300px;
+        height: 280px;
         border: 1px solid var(--clr-dark);
         
         display: flex;
@@ -360,29 +362,39 @@ main {
 
 
     .exp__container {
-        /* width: 1000px; */
+        min-width: 900px;
+        height: 850px;
         display: flex;
-        column-gap: 6rem;
-        /* background-color: #daa520; */
+        justify-content: space-around;
     }
     .exp__item {
         width: 350px;
+        height: 100%;;
     
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
     .exp__item-top{
-        height: 380px;
+        height: 350px;
     }
     .exp__item-bot {
-        height: 500px;
+        height: 450px;
     }
     .exp__title {
-        font-size: 1.125rem;
+        font-size: 1rem;
+        color: var(--clr-light);
+        background-color: var(--clr-dark);
+
+        padding: 8px 16px;
+        width: fit-content;
+        block-size: fit-content;
+
+        float: right;
     }
-    .exp__title-bold {
+    .exp__title-number {
         font-size: 4rem;
+        margin: 5px 0;
     }
     .exp__text {
         font-size: 14px;
@@ -392,7 +404,7 @@ main {
         font-size: 14px;
     }
     .skill__list {
-        margin-bottom: 50px;
+        margin-bottom: 25px;
     }
     
 }
