@@ -6,7 +6,8 @@
 :root {
   /*____________________ Colors ____________________*/
   --clr-dark: #101415;
-  --clr-light: #F7F5F2;
+  /* --clr-light: #F7F5F2; */
+  --clr-light: #E1DFDD;
   --clr-theme: #001AFF;
   --clr-hover: orangered;
 
@@ -362,10 +363,10 @@ main {
 
 
     .exp__container {
-        min-width: 900px;
+        width: 800px;
         height: 850px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     .exp__item {
         width: 350px;
@@ -406,5 +407,102 @@ main {
     .skill__list {
         margin-bottom: 25px;
     }
+
+    /*____________________ About Section ____________________*/
+    .about__section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .about__info {
+        width: 550px;
+        height: 600px;
+        font-size: 1rem;
+        /* border-left: 1px solid var(--clr-dark); */
+        /* background-color: yellowgreen; */
+    }
+    .about__title {
+        font-size: 1rem;
+        color: var(--clr-light);
+        background-color: var(--clr-dark);
+
+        padding: 8px 16px;
+        margin-bottom: 2rem;
+        width: fit-content;
+        block-size: fit-content;
+    }
+
+    .accordion__container {
+        width: 800px;
+        height: 600px;
+        /* background-color: yellowgreen; */
+    }
+    .accordion__item {
+        position: relative;
+        margin: 0px 10px 15px 0;
+    }
+    .accordion__line {
+        border: 1px solid var(--clr-dark);
+    }
+    .accordion__link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.875rem 0;
+        color: var(--clr-dark);
+    }
+    .accordion__label {
+        position: relative;
+        padding: 0.5rem 0;
+        cursor: pointer;
+    }
     
+    .accordion__title {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .accordion__sign {
+        position: absolute;
+        right: -5px;
+        color: var(--clr-dark);
+        font-size: 1.5rem;
+    }
+
+    .accordion__tags {
+        display: flex;
+        margin: 0.5rem auto 0;
+    }
+    .accordion__tags li {
+        font-size: 12px;
+        padding-right: 5px;
+    }
+    .accordion__link .uil-times{
+        display: none;
+    }
+    .accordion__content {
+        max-height: 0;
+        overflow: hidden;
+        position: relative;
+        font-size: 14px;
+        border: 0;
+        transition: max-height 0.4s;
+
+        display: flex;
+        align-items: center;
+    }
+    .accordion__content .accordion__text{
+        font-size: 15px;
+        padding: 1.75rem;
+    }
+    .accordion__item:target .accordion__content {
+        max-height: 150px;
+        border: 1px solid var(--clr-dark);
+    }
+    .accordion__item:target .accordion__link .uil-plus {
+        display: none
+    }
+    .accordion__item:target .accordion__link .uil-times {
+        display: block;
+    }
+
 }
