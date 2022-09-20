@@ -263,7 +263,7 @@ main {
 }
 .about__info {
     width: 80%;
-    height: 400px;
+    height: 500px;
     font-size: 1rem;
     margin-bottom: 2rem;
 }
@@ -351,6 +351,91 @@ main {
 .accordion__item:target .accordion__link .uil-times {
     display: block;
 }
+
+/*____________________ Studio Section ____________________*/
+.studio__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.studio__info {
+    width: 90%;
+    font-size: 0.75rem;
+}
+.studio__title {
+    font-size: 2rem;
+}
+.studio__info .text__subtitle {
+    margin: 0.5rem 0 1rem 0;
+}
+.studio__info .text__link {
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+
+.swiper {
+    width: 98%;
+    height: 350px;
+}
+.swiper-slide {
+    width: 100%;
+    font-size: 1rem;
+    border: 1px solid var(--clr-dark);
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.swiper-button-prev, .swiper-button-next {
+    color: var(--clr-dark);
+}
+
+
+.proj__name {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.875rem;
+
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    padding: 6px 12px;
+
+    width: fit-content;
+    block-size: fit-content;
+}
+.proj__img-container {
+    width: 250px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.proj__img {
+    display: block;
+    height: 95%;
+    object-fit: cover;
+}
+.proj__info {
+    width: 200px;
+    align-self: flex-start;
+    margin-top: 20px;
+}
+.proj__num {
+    font-size: 2.5rem;
+}
+.proj__type {
+    font-size: 0.875rem;
+    margin: 0.75rem 0 1.5rem 0;
+    border: 1px solid var(--clr-dark);
+    padding: 5px 10px;
+    width: fit-content;
+    block-size: fit-content;
+}
+.proj__text{
+    font-size: 0.75rem;
+}
+
 
 
 
@@ -458,8 +543,6 @@ main {
 
 
 
-
-
     .exp__container {
         width: 800px;
         height: 850px;
@@ -539,79 +622,55 @@ main {
 
 
 
-
-
-    .swiper {
-        width: 100%;
-        height: 70%;
-    }
-
-    .swiper-slide {
-        font-size: 1rem;
-        /* background: #fff; */
-        border: 1px solid var(--clr-dark);
-        
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    
-
-    .swiper-slide {
-        width: 70%;
-    }
-
+    /*____________________ Studio Section ____________________*/
     .studio__section {
-        display: flex;
-        flex-direction: column;
+        align-items: flex-start;
         justify-content: space-between;
     }
-    
     .studio__info {
         width: 550px;
         font-size: 1rem;
     }
     .studio__title {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
     .studio__info .text__subtitle {
         margin: 0.75rem 0 2rem 0;
     }
     .studio__info .text__link {
-        font-weight: 400;
+        margin-bottom: 0;
     }
 
-    .proj__name {
-        position: absolute;
-        right: 0;
-        top: 0;
-        font-size: 1rem;
 
-        color: var(--clr-light);
-        background-color: var(--clr-dark);
+    .swiper {
+        width: 100%;
+        height: 500px;
+    }
+    .swiper-slide {
+        width: 40%;
+    }
+
+
+    .proj__name {
+        font-size: 1rem;
         padding: 10px 20px;
     }
     .proj__img-container {
-        /* background-color: goldenrod; */
         width: 350px;
-        /* height: 00px; */
-        /* margin-left: 100px; */
-    }
-    .proj__img {
-        display: block;
-        object-fit: cover;
     }
     .proj__info {
-        width: 400px;
-        align-self: flex-start;
-        margin-top: 20px;
+        width: 200px;
     }
     .proj__num {
         font-size: 4rem;
     }
     .proj__type {
+        font-size: 1rem;
         margin: 1.5rem 0 2rem 0;
+        padding: 6px 12px;
+    }
+    .project__text {
+        font-size: 1rem;
     }
 
 
