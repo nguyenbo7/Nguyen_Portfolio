@@ -437,7 +437,73 @@ main {
 .proj__text{
     font-size: 0.75rem;
 }
+/*========================= MAIL SECTION =========================*/
+.mail__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mail__square {
+    width: 320px;
+    height: 450px;
+    font-size: 0.875rem;
+    border: 1px solid var(--clr-dark);
+    margin-bottom: 4rem;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.875s;
+}
+
+.mail__square:hover {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+}
+
+.mail__title {
+    font-weight: 600;
+    font-size: 5.5rem;
+    margin: 30px 0;
+}
+
+.mail__links > ul {
+    display: flex;
+}
+
+.mail__barcode {
+    font-size: 3rem;
+    font-family: var(--font-barcode);
+    margin: 40px 0;
+}
+/*________________________MAIL Form______________________*/
+.mail__form{
+    width: 320px;
+}
+.mail__info {
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+}
+.form__input {
+    width: 100%;
+    display: block;
+    border: none;
+
+    padding: 20px;
+    margin-bottom: 20px;
+    
+    color: var(--clr-dark);
+    background-color: whitesmoke;
+    border-bottom: 2px solid grey;
+}
+textarea {
+    height: 150px;
+}
+button {
+    color: var(--clr-dark);
+    background-color: greenyellow;
+    padding: 15px 20px;
+}
 
 
 
@@ -681,70 +747,29 @@ main {
     /*========================= MAIL SECTION =========================*/
     .mail__container{
         height: 100%;
-        display: flex;
+        flex-direction: row;
         justify-content: space-between;
     }
     .mail__square {
         width: 550px;
-        height: 650px;
+        height: 700px;
         font-size: 1rem;
-        border: 1px solid var(--clr-dark);
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        transition: 0.875s;
+        margin-bottom: 0;
     }
-
-    .mail__square:hover {
-        background-color: var(--clr-dark);
-        color: var(--clr-light);
-    }
-
     .mail__title {
-        font-weight: 600;
         font-size: 8rem;
-        margin: 40px 0;
+        margin: 50px 0;
     }
-
-    .mail__links > ul {
-        display: flex;
-    }
-
     .mail__barcode {
         font-size: 4rem;
-        font-family: var(--font-barcode);
         margin: 60px 0;
     }
     /*________________________MAIL Form______________________*/
     .mail__form{
         width: 600px;
-        height: 650px;
-        /* background-color: aquamarine; */
-
+        height: 700px;
     }
     .mail__info {
         font-size: 1rem;
-        margin-bottom: 2rem;
-    }
-
-    .form__input {
-        width: 100%;
-        display:block;
-        border:none;
-
-        padding: 20px;
-        margin-bottom: 20px;
-        background-color: var(--clr-light);
-        border-bottom: 1px solid var(--clr-dark);
-    }
-    textarea {
-        height: 150px;
-    }
-    button {
-        background-color: var(--clr-dark);
-        color: var(--clr-light);
-        padding: 15px 20px;
-        float: right;
     }
 }
