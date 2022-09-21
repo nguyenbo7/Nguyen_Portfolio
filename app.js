@@ -4,7 +4,7 @@ let swiper = new Swiper(".mySwiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-    spaceBetween: 30,
+    spaceBetween: 100,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
