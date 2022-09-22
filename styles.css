@@ -118,6 +118,7 @@ main {
 }
 .card__img {
     width: 60%;
+    object-fit: cover;
     overflow: hidden;
 }
 .gooey {
@@ -263,9 +264,8 @@ main {
 }
 .about__info {
     width: 80%;
-    height: 500px;
-    font-size: 1rem;
-    margin-bottom: 2rem;
+    height: 800px;
+    margin-bottom: 10rem;
 }
 .about__title {
     font-size: 1rem;
@@ -279,77 +279,101 @@ main {
 }
 .about__text {
     font-size: 0.875rem;
+    margin-bottom: 3rem;
+}
+.about__img-container {
+    width: 100%;
+    height: 500px;
+    /* display: flex; */
+}
+.about__img {
+    object-fit: cover;
+    /* opacity: 0.8; */
 }
 
+/*__________Accordion About Section__________*/
 
 .accordion__container {
     width: 80%;
     height: 500px;
 }
+.accordion__header-text {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
 .accordion__item {
+    border-top: 1px solid var(--clr-dark);
+}
+.accordion__item button[aria-expanded='true'] {
+    border-bottom: 1px solid var(--clr-dark);
+}
+.accordion button {
     position: relative;
-    margin: 0px 5px 10px 0;
+    width: 100%;
+    padding: 1.5rem 0;
+    border: none;
+
+    text-align: left;
+    color: rgb(99, 99, 99);
+    background-color: var(--clr-light);
 }
-.accordion__line {
-    border: 1px solid var(--clr-dark);
-}
-.accordion__link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 0;
-    color: var(--clr-dark);
-}
-.accordion__label {
-    position: relative;
-    padding: 0.5rem 0;
+.accordion button:hover {
     cursor: pointer;
+    color: blue;
 }
-
 .accordion__title {
-    font-size: 0.875rem;
-}
-.accordion__sign {
-    position: absolute;
-    right: -5px;
-    color: var(--clr-dark);
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
-.accordion__tags {
-    display: flex;
-    margin: 0.5rem auto 0;
+.accordion__icon {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 22px;
+    width: 22px;
+    height: 22px;
 }
-.accordion__tags li {
-    font-size: 12px;
-    padding-right: 5px;
+.accordion__icon::before {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 9px;
+    left: 5px;
+    width: 10px;
+    height: 2px;
+    background-color: black;
 }
-.accordion__link .uil-times{
-    display: none;
+.accordion button .accordion__icon::after {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 5px;
+    left: 9px;
+    width: 2px;
+    height: 10px;
+    background-color: black;
 }
-.accordion__content {
+.accordion button[aria-expanded='true'] {
+    color: blue;
+}
+.accordion button[aria-expanded='true'] .accordion__icon::after {
+    width: 0;
+}
+.accordion button[aria-expanded='true'] + .accordion__content {
+    opacity: 1;
+    max-height: 200px;
+    transition: all 300ms linear;
+}
+.accordion .accordion__content {
+    opacity: 0;
     max-height: 0;
     overflow: hidden;
-    position: relative;
-    
-    transition: max-height 0.4s;
-
-    display: flex;
-    align-items: center;
+    transition: opacity 300ms linear, max-height 300ms linear;
 }
-.accordion__content .accordion__text{
-    font-size: 12px;
-    padding: 1rem;
-}
-.accordion__item:target .accordion__content {
-    max-height: 150px;
-    border: 1px solid var(--clr-dark);
-}
-.accordion__item:target .accordion__link .uil-plus {
-    display: none
-}
-.accordion__item:target .accordion__link .uil-times {
-    display: block;
+.accordion .accordion__content p {
+    font-size: 0.875rem;
+    font-weight: 300;
+    margin: 2em 0;
 }
 
 /*____________________ Studio Section ____________________*/
@@ -499,7 +523,7 @@ main {
 textarea {
     height: 150px;
 }
-button {
+.contact__button {
     color: var(--clr-dark);
     background-color: greenyellow;
     padding: 15px 20px;
@@ -661,31 +685,41 @@ button {
     .about__section {
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-start;
     }
     .about__info {
         width: 550px;
-        height: 600px;
+        height: 800px;
+        margin-bottom: 0;
     }
     .about__text {
         font-size: 1rem;
     }
+    .about__img-container {
+        width: 100%;
+        height: 800px;
+    }
+
+
     .accordion__container {
         width: 800px;
         height: 600px;
-        /* background-color: yellowgreen; */
     }
-    .accordion__item {
-        margin: 0px 10px 15px 0;
+    .accordion__header-text {
+        font-size: 4.5rem;
     }
-    .accordion__link {
-        padding: 0.875rem 0;
+    .accordion button {
+        padding: 2rem 0;
     }
     .accordion__title {
-        font-size: 1rem;
+        font-size: 1.125rem;
     }
-    .accordion__content .accordion__text{
-        font-size: 15px;
-        padding: 1.75rem;
+    .accordion__icon {
+        top: 30px;
+    }
+    .accordion .accordion__content p {
+        font-size: 1rem;
+        margin: 2.5rem 0;
     }
 
 
